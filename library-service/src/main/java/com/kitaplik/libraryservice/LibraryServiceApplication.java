@@ -1,6 +1,7 @@
 package com.kitaplik.libraryservice;
 
 import com.kitaplik.libraryservice.client.RetrieveMessageErrorDecoder;
+import feign.Logger;
 import feign.codec.ErrorDecoder;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -15,8 +16,14 @@ public class LibraryServiceApplication {
 		SpringApplication.run(LibraryServiceApplication.class, args);
 	}
 
-	@Bean
-	public ErrorDecoder getErrorDecoder() {
-		return new RetrieveMessageErrorDecoder();
-	}
+// Feign ClientError Handling
+//	@Bean
+//	public ErrorDecoder getErrorDecoder() {
+//		return new RetrieveMessageErrorDecoder();
+//	}
+//
+//	@Bean
+//	Logger.Level feignLoggerLevel() {
+//		return Logger.Level.FULL;
+//	}
 }

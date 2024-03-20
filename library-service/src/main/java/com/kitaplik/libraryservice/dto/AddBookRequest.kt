@@ -1,6 +1,6 @@
 package com.kitaplik.libraryservice.dto
 
 data class AddBookRequest (
-        val id: String,
-        val isbn: String
+        val id: String,  //library
+        val isbn: String //book
 )
